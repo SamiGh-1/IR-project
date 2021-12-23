@@ -1,0 +1,178 @@
+body {
+    background-color: black;
+    font-family: 'Shadows Into Light', cursive !important;
+}
+
+#map {
+    margin-top: 3% !important;
+    height: 400px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+#PLOT {
+    width: 70%;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 4%;
+}
+
+#insight {
+    font-family: 'Shadows Into Light', cursive;
+    width: 13% !important;
+    border: white !important;
+    margin: 3% 0 0 43.3% !important;
+    color: white;
+    background-color: yellowgreen !important;
+    font-size: 19px !important;
+    padding: 1%;
+    border-radius: 40px;
+}
+
+#insight:hover {
+    background-color: white !important;
+    color: yellowgreen !important;
+}
+
+.modal-fade {
+    position: fixed;
+    top: 50%;
+    position: absolute;
+}
+
+#p {
+    width: 60% !important;
+}
+
+#modal {
+    color: black;
+    font-size: 20px;
+    list-style-type: none;
+}
+
+.tweets {
+    font-family: 'Shadows Into Light', cursive;
+    background-color: #fefefe;
+    color: black;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: yellowgreen;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+P,
+h3 {
+    color: white;
+}
+
+.navbar {
+    flex-wrap: nowrap;
+    justify-content: normal;
+    background-color: rgb(17, 17, 17);
+    overflow: hidden !important;
+    border-radius: 50px;
+}
+
+.navbar a {
+    float: left !important;
+    display: block !important;
+    color: #f2f2f2;
+    text-align: center !important;
+    padding: 14px 16px !important;
+    text-decoration: none !important;
+    font-size: 19px;
+}
+
+.navbar a:hover {
+    color: yellowgreen;
+}
+
+.navbar a.active {
+    color: yellowgreen;
+}
+
+.navbar input {
+    color: yellowgreen;
+    border-bottom: 1px solid white;
+    float: right !important;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.search-container {
+    width: 100%;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    margin-top: 8%;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {
+        display: none;
+    }
+    .navbar a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar.responsive {
+        position: relative;
+    }
+    .n.responsive.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar .search-container {
+        float: none;
+    }
+    .navbar a,
+    .navbar input[type=text],
+    .navbar .search-container button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .navbar input[type=text] {
+        border: 1px solid #ccc;
+    }
+}

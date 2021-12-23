@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<head>
+  <title> map </title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link href="{{ url_for('static', filename='stylu.css') }}" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <a class="active" href="map.html"> L<sup>2</sup> </a>
+      <a href="about.html">About</a>
+
+      </a>
+      <div class="search-container">
+        <input style="display:none;" id="keyword" type="text" placeholder="Search A Keyword.." name="keyword" />
+        <input style="display:none;" id="T1" type="number" placeholder="Enter First Month.." name="T1" />
+        <input style="display:none;" id="T2" type="number" placeholder="Enter Last Month.." name="T2" />
+      </div>
+
+
+    </div>
+  </header>
+
+  <div id="sen" style="margin-top:7% !important;">
+    <h3 style="margin-top:4% color:white"> &nbsp; Select An Area In North America <p
+        style="display:inline-block; font-size:14px; color:yellowgreen;"> ( by selecting 4 different points )
+      </p>
+    </h3>
+  </div>
+  <div id="map"></div>
+
+
+  <canvas id="PLOT"></canvas>
+
+  <button style="display:none;" type="button" id="insight" data-toggle="modal" data-target="#exampleModal"
+    onclick="Insight()">
+    Get insight
+  </button>
+
+  <div id='p'>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Tweets</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <p class="modal-body" id="modal">
+            need 5ealing
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <p> Dana Ismail - 11926574 </p>
+    <a href="dana.ismail@stu.najah.edu" style="color:yellowgreen"> dana.ismail@stu.najah.edu </a>
+    <p> Sami Ghazal - 11923667</p>
+    <a href="sami.ghazal.2@gmail.com" style="color:yellowgreen"> sami.ghazal@stu.najah.edu </a>
+  </footer>
+
+  <script src="{{ url_for('static', filename='map.js') }}"></script>
+
+</body>
+
+</html>
